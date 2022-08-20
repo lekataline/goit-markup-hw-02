@@ -1,0 +1,255 @@
+/*  палітра 
+black
++ rgba(0, 0, 0, 1)
+rgba(33, 33, 33, 1)
+
+gray 
+rgba(117, 117, 117, 1)
+rgba(245, 244, 250, 1)
+
+blue
+rgba(33, 150, 243, 1);
+rgba(24, 140, 232, 1)
+
+white:
+rgba(255, 255, 255, 1)
+rgba(255, 255, 255, 0.6)
+
+
+line
+rgba(236, 236, 236, 1) 
+rgba(238, 238, 238, 1)
+ */
+
+:root {
+    
+    /* Fonts */
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+
+    /* Text colors */
+    --main-txt-cl: #757575;
+    --heading-txt-cl: #212121;
+    --light-txt-cl: #ffffff;
+    --accent-txt-cl: #2196F3;
+    --active-txt-cl: #188CE8;
+    /* --grey-txt-cl: #9da4bd; */
+    /* --grey-txt-cl-60: rgba(157, 164, 189, 0.6); */
+
+    /* Background colors */
+    --section-bg-cl: #F5F4FA;
+    --accent-bg-cl: #2F303A; 
+
+    /* Button colors */
+    --accent-bt-cl: #2196F3;
+    --active-bt-cl: #188CE8;
+
+    /* Others */
+}
+
+.page {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--main-txt-cl);
+    background-color: #FFFFFF;
+}
+
+/* reset */
+.link {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.list {
+    list-style: none;
+}
+
+
+/**
+  |============================
+  | Header
+  |============================
+*/
+
+.page-header {
+
+}
+
+.logo{
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo-accent-cl {
+    color: var(--accent-txt-cl);
+}
+
+.site-nav {
+
+}
+
+.site-nav a,
+.contact-nav a {
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--heading-txt-cl);
+}
+
+.site-nav a:hover, .site-nav a:focus,
+.contact-nav a:hover, .contact-nav a:focus {
+    color: var(--accent-txt-cl);
+    cursor: pointer;
+}
+
+.site-nav a:active {
+    color: var(--accent-txt-cl);
+}
+
+.contact-nav {
+
+}
+
+.contact-nav a {
+    color: #757575;
+}
+
+
+/**
+  |============================
+  | Hero
+  |============================
+*/
+.hero {
+    background-color: var(--accent-bg-cl);
+}
+
+.hero-title {
+    font-weight: 900;
+        font-size: 44px;
+        line-height: calc(60 / 44);
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--light-txt-cl);
+}
+
+.hero-btn {
+   
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--light-txt-cl);
+
+    /* bg */
+    background: var(--accent-bt-cl);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.hero-btn:hover {
+    background-color: var(--active-bt-cl);
+}
+
+.features {
+    
+}
+
+.features-title, 
+.work-title,
+.team-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    color: var(--heading-txt-cl);
+
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.features-subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--heading-txt-cl);
+
+}
+
+.team-section {
+    background-color: var(--section-bg-cl);
+}
+
+.team-subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--heading-txt-cl);
+}
+
+.team-txt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+/**
+  |============================
+  | Footer
+  |============================
+*/
+.footer {
+    background-color: var(--accent-bg-cl);
+    color: var(--light-txt-cl);
+}
+
+.logo-ft-cl {
+    color: var(--light-txt-cl);
+}
+
+.address {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.address a:hover, .address a:focus {
+    color: var(--accent-txt-cl);
+    cursor: pointer;
+}
+
+.map {
+    color: var(--light-txt-cl);
+}
