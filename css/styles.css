@@ -233,7 +233,7 @@ body {
   cursor: pointer;
   color: var(--heading-txt-cl);
   background: var(--section-bg-cl);
-  /* border-radius: 4px; */
+  border-radius: 4px;
 }
 
 .portfolio-btn:hover,
