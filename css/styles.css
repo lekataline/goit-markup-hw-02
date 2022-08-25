@@ -12,6 +12,7 @@ rgba(238, 238, 238, 1)
   /* Text colors */
   --main-txt-cl: #757575;
   --heading-txt-cl: #212121;
+  --dark-txt-cl: #000000;
   --light-txt-cl: #ffffff;
   --accent-txt-cl: #2196f3;
   --active-txt-cl: #188ce8;
@@ -30,7 +31,6 @@ rgba(238, 238, 238, 1)
 
 body {
   font-family: var(--main-font);
-  font-style: normal;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
@@ -40,7 +40,8 @@ body {
 
 /* reset */
 
-.link {
+.link,
+.contact-nav-link {
   text-decoration: none;
   color: currentColor;
 }
@@ -63,8 +64,9 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
   text-decoration: none;
-  color: #000000;
+  color: var(--dark-txt-cl);
 }
 
 .logo-accent-cl {
@@ -72,10 +74,12 @@ body {
 }
 
 .site-nav {
+  color: var(--heading-txt-cl);
 }
 
-.site-nav a,
-.contact-nav a {
+.site-nav-link,
+.contact-nav-link {
+  font-family: inherit;
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
@@ -83,16 +87,16 @@ body {
   color: var(--heading-txt-cl);
 }
 
-.site-nav a:hover,
-.site-nav a:focus,
-.contact-nav a:hover,
-.contact-nav a:focus {
+.site-nav-link:hover,
+.site-nav-link:focus,
+.contact-nav-link:hover,
+.contact-nav-link:focus {
   color: var(--accent-txt-cl);
   cursor: pointer;
 }
 
-.site-nav a:active {
-  color: var(--accent-txt-cl);
+.site-nav-link:active {
+  color: var(--active-txt-cl);
 }
 
 .link-nav {
@@ -105,7 +109,7 @@ body {
 .contact-nav {
 }
 
-.contact-nav a {
+.contact-nav-link {
   color: var(--main-txt-cl);
 }
 
@@ -131,7 +135,7 @@ body {
 }
 
 .hero-btn {
-  font-family: inherit
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
@@ -165,6 +169,7 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
+  letter-spacing: 0.03em;
   text-align: center;
   color: var(--heading-txt-cl);
 }
@@ -184,9 +189,7 @@ body {
 
 .features-subtitle {
   font-weight: 700;
-  font-size: 14px;
   line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--heading-txt-cl);
 }
@@ -198,7 +201,7 @@ body {
 }
 
 .team li {
-    background-color: var(--bg-cl);
+  background-color: var(--bg-cl);
 }
 
 .team-subtitle {
@@ -211,7 +214,6 @@ body {
 }
 
 .team-txt {
-  font-weight: 400;
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
@@ -254,22 +256,20 @@ body {
 }
 
 .portfolio {
-
 }
 
 .portfolio-subtitle {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: calc(36 / 18);
-    letter-spacing: 0.06em;
-    color: var(--heading-txt-cl);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+  color: var(--heading-txt-cl);
 }
 
 .portfolio-spec {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    letter-spacing: 0.03em;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.03em;
 }
 
 /**
@@ -288,15 +288,12 @@ body {
 
 .address {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.address a:hover,
-.address a:focus {
+.address .link:hover,
+.address .link:focus {
   color: var(--accent-txt-cl);
   cursor: pointer;
 }
